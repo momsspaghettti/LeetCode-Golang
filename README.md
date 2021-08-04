@@ -1,2 +1,2 @@
 # LeetCode-Golang
-LeetCode tasks on Golang
+[LeetCode](https://leetcode.com/) tasks on Golang
