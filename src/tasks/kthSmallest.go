@@ -1,4 +1,4 @@
-package kthSmallestElementInBST
+package tasks
 
 // https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 

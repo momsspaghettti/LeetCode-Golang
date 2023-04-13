@@ -1,4 +1,4 @@
-package addOpearators
+package tasks
 
 import (
 	"fmt"
@@ -76,7 +76,7 @@ func (s *stack) length() int {
 	return len(*s)
 }
 
-func parseExpression(expressionStr string) (iExpressionNode, error) {
+func parseExpressionForAddOperators(expressionStr string) (iExpressionNode, error) {
 	stack := stack(make([]iExpressionNode, 0, len(expressionStr)))
 
 	buff := strings.Builder{}
@@ -203,7 +203,7 @@ func AddOperators(num string, target int) []string {
 
 		if i.nextInd == len(numArr) {
 			expressionStr := strArrayToStr(i.expr)
-			expression, err := parseExpression(expressionStr)
+			expression, err := parseExpressionForAddOperators(expressionStr)
 			if err != nil {
 				panic(err)
 			}

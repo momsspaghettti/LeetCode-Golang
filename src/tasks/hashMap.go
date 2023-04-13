@@ -1,4 +1,4 @@
-package hashMap
+package tasks
 
 // https://leetcode.com/problems/design-hashmap/
 
@@ -15,7 +15,7 @@ type MyHashMap struct {
 	array []*ListNode
 }
 
-/** Initialize your data structure here. */
+// Constructor /** Initialize your data structure here. */
 func Constructor() MyHashMap {
 	hashMap := MyHashMap{
 		make([]*ListNode, 7919),
@@ -23,7 +23,7 @@ func Constructor() MyHashMap {
 	return hashMap
 }
 
-/** value will always be non-negative. */
+// Put /** value will always be non-negative. */
 func (this *MyHashMap) Put(key int, value int) {
 	ind := key % len(this.array)
 
@@ -41,7 +41,7 @@ func (this *MyHashMap) Put(key int, value int) {
 	this.array[ind] = newHead
 }
 
-/** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
+// Get /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
 func (this *MyHashMap) Get(key int) int {
 	ind := key % len(this.array)
 
@@ -56,7 +56,7 @@ func (this *MyHashMap) Get(key int) int {
 	return -1
 }
 
-/** Removes the mapping of the specified value key if this map contains a mapping for the key */
+// Remove /** Removes the mapping of the specified value key if this map contains a mapping for the key */
 func (this *MyHashMap) Remove(key int) {
 	ind := key % len(this.array)
 
