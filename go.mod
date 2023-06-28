@@ -1,3 +1,3 @@
 module github.com/momsspaghettti/LeetCode-Golang
 
-go 1.20.3
+go 1.20.5
